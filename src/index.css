@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply m-0 p-0 box-border;
+  }
+
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply font-sans bg-ivory-100 text-charcoal-600 leading-relaxed antialiased overflow-x-hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-elegant leading-tight;
+  }
+
+  ::selection {
+    @apply bg-blush-400 text-white;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply px-6 sm:px-8 py-2.5 sm:py-3 bg-charcoal-600 text-ivory-50 rounded-full font-medium 
+           transition-all duration-300 hover:bg-charcoal-700 hover:shadow-elegant
+           tracking-wide uppercase text-xs sm:text-sm active:scale-95;
+  }
+
+  .btn-outline {
+    @apply px-6 sm:px-8 py-2.5 sm:py-3 border-2 border-charcoal-600 text-charcoal-600 rounded-full 
+           font-medium transition-all duration-300 hover:bg-charcoal-600 hover:text-ivory-50
+           tracking-wide uppercase text-xs sm:text-sm active:scale-95;
+  }
+
+  .section-title {
+    @apply text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-elegant text-charcoal-700 mb-4 sm:mb-6 leading-tight;
+  }
+
+  .section-subtitle {
+    @apply text-base sm:text-lg md:text-xl text-charcoal-400 max-w-2xl mx-auto leading-relaxed;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-gradient-to-r from-blush-400 via-gold-400 to-blush-300 bg-clip-text text-transparent;
+  }
+
+  .elegant-border {
+    @apply border border-nude-300;
+  }
+}
